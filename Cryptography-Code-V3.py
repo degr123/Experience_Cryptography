@@ -1,0 +1,74 @@
+import random
+# section 1 - main menu
+def menu():
+    print("\n--- Cryptography Menu ---")
+    print("1 -- caesar cypher")
+    print("2 -- caesar cypher game")
+    print("0 -- quit")
+
+    
+def main():
+    while True:
+        menu()
+        choice = input("select an option")
+        if choice == "1 -- caesar cypher":
+            run_caesar()
+        elif choice == "2 -- caesar cypher game":
+            guessing_game()
+        elif choice == "0":
+            break
+        else:
+            print("Invalid Choice")
+# Section 2 
+# Caesar cypher
+def run_caesar():
+    print("Enter your message to be encrypted below")
+    message1 = input("Enter message: ")
+    shift = int(input("Enter shift (num) :"))
+    encrypted1 = encrypt(message1, shift)
+    print("message1")
+    print("encrypted1")
+    HowItWorks = input("Would you like to know how it works? (y/n): ")
+    if HowItWorks == "y" :
+                print("The cypher rotates the letters based on the shift made, for example 1 shift would look like (a -> b)")
+# Cypher game
+words = ["the","words","are","super","hard","to","guess","caesar","is","fun"]
+select_word = random.choice(words)
+shift_amount = random.randint(1, 25)
+encrypted_word = ""
+for characters in select_word:
+    if char.isalpha():
+        encrypted_word += chr((ord(char) + shift_ammount - 97) %26 + 97)
+        else:
+            encrypted_word +- char
+    
+def rounds():
+    choice = input("are you ready to play (y/n)")
+    if choice == "y":
+        print("This game will have a randomly shifted caesar cypher)
+        print("Your job is to find out the word
+        print("You have 3 attempts -- GOOD LUCK")
+        print(f"\nThe encrypted word is: {encrypted_word}")
+        attempts = 3
+        while attempts > 0:
+            guess = input(f"\Enter your guess ({attempts} attempts left): ").lower
+            if guess == select_word:
+                print("Correct!")
+                return
+            else:
+                print("Incorrect")
+                attempts -= 1
+        print(f"\n You are out of attempts. The correct word was '{select_word}' shifted {shift_ammount} times ")
+        
+def guessing_game():
+    choice = input("\nWould you like to play again (y/n)?: ")
+    if choice == "y":
+        while True:
+            rounds()
+            again = input("\nWould you like to play again? (y/n): ").lower()
+            if again != "y":
+                print("\nThanks for playing! Goodbye!")
+                break
+    else:
+        print("Maybe next time!")
+main()
