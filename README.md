@@ -12,7 +12,7 @@ I felt that many people are not aware of the necessity of encryption and how the
 
 You need Python 3 installed, and a terminal to type in. To run you can double click [Cryptography-Code-Final] script or run it from the terminal
 
-The menu
+---The menu---
 
 The menu asks you to type a number and press Enter.
 
@@ -21,7 +21,7 @@ The menu asks you to type a number and press Enter.
 0 prints "Goodbye!" and the program stops.
 If you type anything else it prints "Invalid Choice" and shows the menu again
 
-Option 1, the cypher
+---Option 1, the cypher---
 
 1. Type your message and press Enter. Spaces and punctuation are allowed. They stay as they are
 2. Type the shift as a whole number and press Enter. For example 3
@@ -30,7 +30,7 @@ Option 1, the cypher
    - Type y if you want the short explanation. After that you go back to the menu
    - Type anything else and you go back to the menu with no explanation
 
-Option 2, the game
+---Option 2, the game---
 
 1. It asks Are you ready to play (y/n):
    - y starts the round.
